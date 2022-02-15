@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:rate_trip/model/trip.dart';
+import 'package:rate_trip/widgets/add_tip.dart';
 import 'package:rate_trip/widgets/custom_bottom_sheet.dart';
 import 'package:rate_trip/widgets/issue_item.dart';
 import 'package:rate_trip/widgets/issues.dart';
 import 'package:rate_trip/widgets/rate_or_tip.dart';
+import 'package:rate_trip/widgets/rating_button.dart';
+import 'package:rate_trip/widgets/rating_submitted.dart';
 import 'package:rate_trip/widgets/submit_button.dart';
 
 class StarRating extends StatefulWidget {
@@ -80,7 +83,7 @@ class _StarRatingState extends State<StarRating> {
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
           child: Text(
-            "Rate your trip and thank ${widget.trip.driverName}",
+            "Rate your trip and thank ${widget.trip.driverName} with a Tip",
             textAlign: TextAlign.center,
             style: const TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
           ),
@@ -96,15 +99,11 @@ class _StarRatingState extends State<StarRating> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              IconButton(onPressed: () {}, icon: _initIcon4),
-              IconButton(onPressed: () {}, icon: _initIcon3),
-              IconButton(
-                  onPressed: () {
-                    setState(() {});
-                  },
-                  icon: _initIcon1),
-              IconButton(onPressed: () {}, icon: _initIcon5),
-              IconButton(onPressed: () {}, icon: _initIcon2),
+              RatingButton(),
+              RatingButton(),
+              RatingButton(),
+              RatingButton(),
+              RatingButton(),
             ],
           ),
         ),
@@ -120,24 +119,31 @@ class _StarRatingState extends State<StarRating> {
             style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
           ),
         ),
-         Padding(
+        Padding(
           padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
           child: InkWell(
-            onTap:(){
-               CustomBottomSheet.showBottomSheet(context, RateOrTip());
+            onTap: () {
+              CustomBottomSheet.showBottomSheet(context, RateOrTip());
             },
-            child: Text(
+            child: const Text(
               "Choose Up to Five Issue",
               style: TextStyle(
                   fontSize: 16, fontWeight: FontWeight.bold, color: Colors.red),
             ),
           ),
         ),
+        InkWell(
+            onTap: () {
+              CustomBottomSheet.showBottomSheet(context, AddTip());
+            },
+            child: Text("Add Tip",
+                style: TextStyle(color: Colors.green, fontSize: 18))),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 40),
           child: SubmitButton(
             onPressed: () {
-          
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (_) => RatingSubmitted()));
             },
           ),
         )

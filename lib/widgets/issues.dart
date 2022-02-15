@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rate_trip/constants/chips.dart';
 import 'package:rate_trip/constants/constants.dart';
+import 'package:rate_trip/widgets/custom_button.dart';
 import 'package:rate_trip/widgets/issue_item.dart';
 import 'package:rate_trip/widgets/submit_button.dart';
 
@@ -61,21 +62,7 @@ class Issues extends StatelessWidget {
               icon: Icons.health_and_safety,
               title: issueHeading[6],
               values: healthHygeineIssues),
-          Container(
-            width: double.infinity,
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-              child: MaterialButton(
-                padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-                onPressed: () {},
-                color: Colors.black,
-                child: const Text(
-                  "DONE",
-                  style: TextStyle(color: Colors.white),
-                ),
-              ),
-            ),
-          ),
+          CustomButton(label: "DONE")
         ],
       ),
     );
