@@ -44,7 +44,9 @@ class _AddTipState extends State<AddTip> {
                 InputChip(
                   checkmarkColor: Colors.white,
                   onSelected: (value) {
-                    value ? _tipManager.addTip(100) : _tipManager.reduceTip(100);
+                    value
+                        ? _tipManager.addTip(100)
+                        : _tipManager.reduceTip(100);
                     setState(() {
                       _is100 = value;
                     });
@@ -59,7 +61,9 @@ class _AddTipState extends State<AddTip> {
                 InputChip(
                   checkmarkColor: Colors.white,
                   onSelected: (value) {
-                    value ? _tipManager.addTip(200) : _tipManager.reduceTip(200);
+                    value
+                        ? _tipManager.addTip(200)
+                        : _tipManager.reduceTip(200);
                     setState(() {
                       _is200 = value;
                     });
@@ -72,9 +76,11 @@ class _AddTipState extends State<AddTip> {
                       )),
                 ),
                 InputChip(
-                 checkmarkColor: Colors.white,
+                  checkmarkColor: Colors.white,
                   onSelected: (value) {
-                    value ? _tipManager.addTip(500) : _tipManager.reduceTip(500);
+                    value
+                        ? _tipManager.addTip(500)
+                        : _tipManager.reduceTip(500);
                     setState(() {
                       _is500 = value;
                     });
@@ -87,7 +93,7 @@ class _AddTipState extends State<AddTip> {
                       )),
                 ),
                 InputChip(
-                   checkmarkColor: Colors.white,
+                  checkmarkColor: Colors.white,
                   onSelected: (value) {
                     value
                         ? _tipManager.addTip(1000)
