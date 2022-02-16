@@ -1,36 +1,24 @@
-<!-- 
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages). 
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages). 
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
-
-## Features
-
-TODO: List what your package can do. Maybe include images, gifs, or videos.
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+add the rate_trip package from pub dev
+pub add rate_trip
 
 ## Usage
+ /// The rate trip package expose a trip class where the uses passes in a trip
+  /// 
+  /// //invoke the RateTrip class to rate your trip thats all.
+  final trip = Trip("Oscar Anyiam",
+      "103 St Finbars Road Bariga Yaba Lagos Nigeria", "assets/face2.jpg");
+      
+      RateTrip(
+            trip: trip,
+            color: Colors.grey,
+          ),
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
 
-```dart
-const like = 'sample';
-```
+
 
 ## Video 
 
