@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rate_trip/model/trip.dart';
 import 'package:rate_trip/widgets/rate_or_tip.dart';
-import 'package:rate_trip/widgets/rating_start.dart';
+import 'package:rate_trip/widgets/start_rating.dart';
 
 void main() {
   runApp(const RatingApp());

@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
   final String label;
-  const CustomButton({required this.label});
+  final VoidCallback onPressed;
+  const CustomButton({required this.label,required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +13,7 @@ class CustomButton extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
         child: MaterialButton(
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-          onPressed: () {},
+          onPressed: onPressed,
           color: Colors.black,
           child: Text(
             label,

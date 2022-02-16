@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:rate_trip/util/rating_manager.dart';
+import 'package:rate_trip/util/tip_manager.dart';
 
 class RatingButton extends StatefulWidget {
   @override
@@ -24,15 +26,22 @@ class _RatingButtonState extends State<RatingButton> {
     color: Colors.grey,
     size: 50.0,
   );
+
+  RatingManager _ratingManager = RatingManager.instance;
   @override
   Widget build(BuildContext context) {
     return IconButton(
         onPressed: () {
+           _ratingManager.increase();
+            print(_ratingManager.increase());
           if (isClicked) {
+           
+           
             setState(() {
               isClicked = false;
             });
           } else {
+            _ratingManager.decrease();
             setState(
               () {
                 isClicked = true;

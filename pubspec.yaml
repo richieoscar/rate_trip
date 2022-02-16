@@ -1,14 +1,13 @@
 name: rate_trip
 description: Trip Rating Package
 version: 0.0.1
-homepage: null
+homepage: "Rate Trip"
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
   flutter: ">=1.17.0"
 
 dependencies:
-  accordion: ^2.1.2
   flutter:
     sdk: flutter
   provider: ^6.0.2
