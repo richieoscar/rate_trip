@@ -32,8 +32,6 @@ to `/example` folder.
 const like = 'sample';
 ```
 
-## Additional information
+## Video 
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+https://user-images.githubusercontent.com/71092412/154267573-24ae054c-4525-47e7-9364-e8287aa568a8.mp4
