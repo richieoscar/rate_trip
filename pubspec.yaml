@@ -1,7 +1,7 @@
 name: rate_trip
 description: Trip Rating Package
 version: 0.0.1
-homepage: "Rate Trip"
+homepage: "https://github.com/richieoscar/rate_trip"
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
