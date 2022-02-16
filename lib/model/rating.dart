@@ -17,13 +17,7 @@ class Rating {
 
   Rating(this._rating, this._issues, this._tip);
 
-  void addTip(int amount) {
-    _tip += amount;
-  }
-
-  void reduceTip(int amount) {
-    _tip -= amount;
-  }
+  
 
   @override
   String toString() => 'Rating(_rating: $_rating, _issues: $_issues _tip: $_tip,)';

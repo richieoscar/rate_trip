@@ -28,26 +28,28 @@ class _RatingButtonState extends State<RatingButton> {
   );
 
   RatingManager _ratingManager = RatingManager.instance;
+
   @override
   Widget build(BuildContext context) {
     return IconButton(
         onPressed: () {
-           _ratingManager.increase();
-            print(_ratingManager.increase());
+          _ratingManager.increase();
+          print(_ratingManager.total());
           if (isClicked) {
-           
-           
+            // print(_ratingManager.total());
             setState(() {
               isClicked = false;
             });
           } else {
-            _ratingManager.decrease();
+           
             setState(
               () {
                 isClicked = true;
               },
             );
           }
+
+          //print(_ratingManager.total());
         },
         icon: isClicked ? _icon2 : _initIcon1);
   }

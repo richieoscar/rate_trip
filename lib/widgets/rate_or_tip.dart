@@ -213,6 +213,7 @@ class _RateOrTipState extends State<RateOrTip> {
         CustomButton(
             label: "DONE",
             onPressed: () {
+              Navigator.pop(context);
               print(_issueManager.issues());
             }),
       ],

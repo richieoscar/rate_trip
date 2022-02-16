@@ -168,6 +168,7 @@ class _AddTipState extends State<AddTip> {
                 child: MaterialButton(
                   padding: EdgeInsets.all(20),
                   onPressed: () {
+                    print(_tipManager.tips());
                     Navigator.pop(context);
                   },
                   child:

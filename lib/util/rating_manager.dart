@@ -6,11 +6,13 @@ class RatingManager {
   int _rating = 0;
 
   int increase() {
-   return _rating = _rating + 1;
+    int sum = 0;
+    _rating = _rating + 1;
+    return _rating;
   }
 
   int decrease() {
-   return _rating--;
+    return _rating--;
   }
 
   int total() {

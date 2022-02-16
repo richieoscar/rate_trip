@@ -29,7 +29,7 @@ class RatingSubmitted extends StatelessWidget {
                 textAlign: TextAlign.center),
           ),
           rating.issues.length != 0
-              ? Text(
+              ? const Text(
                   "Your Issues have been Lodged and Driver Will be Cautioned!",
                   textAlign: TextAlign.center,
                   style: TextStyle(
@@ -38,7 +38,7 @@ class RatingSubmitted extends StatelessWidget {
                     fontSize: 18,
                   ),
                 )
-              : Text(""),
+              : const Text(""),
           Align(
             alignment: Alignment.bottomCenter,
             child: CustomButton(

@@ -13,8 +13,8 @@ class RateTipManger {
   final RatingManager _ratingManager = RatingManager.instance;
 
   Rating ratings() {
-    Rating rating = Rating(
-        _tipManager.tips(), _issueManager.issues(), _ratingManager.total());
+    Rating rating = Rating(_ratingManager.total()
+       , _issueManager.issues(),  _tipManager.tips());
     return rating;
   }
 }

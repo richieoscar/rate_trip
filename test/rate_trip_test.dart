@@ -24,7 +24,7 @@ void main() {
     TipManager tipManager = TipManager.instance;
     int tip = tipManager.addTip(1000);
 
-    expect(700, tipManager.reduceTip(300));
+    expect(0, tipManager.reduceTip(1000));
   });
 
   test('Get Total Tip Test', () {
